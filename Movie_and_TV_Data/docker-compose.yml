@@ -1,0 +1,8 @@
+
+services:
+  application:
+    container_name: movie_and_TV_Data
+    image: movie_and_TV_Data
+    restart: always
+    ports:
+      - "8080:8080"
