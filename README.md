@@ -31,4 +31,5 @@ With this you can use it in com.movietv.services.MovieService
 # Running the Web Application
 Enter the URL 'http://localhost:8080/view-movie' in a web browser. The result is then displayed in the web browser
 
-<img width="1888" height="919" alt="image" src="https://github.com/user-attachments/assets/6e2caab5-a0e1-4d10-ab13-164af7dc4950" />
+<img width="1889" height="969" alt="image" src="https://github.com/user-attachments/assets/964d8862-4b28-4129-a753-95f1249aa4c4" />
+
