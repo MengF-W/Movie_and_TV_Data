@@ -13,9 +13,12 @@
     <tr>
         <th>Language</th>
         <th>Title</th>
+        <th>Name</th>
+        <th>Movie Poster</th>
         <th>Overview</th>
         <th>Popularity</th>
         <th>Release Date</th>
+        <th>First Air Date</th>
         <th>Vote Average</th>
         <th>Vote Count</th>
 
@@ -26,9 +29,12 @@
         <tr>
             <td>${movie.original_language}</td>
             <td>${movie.title}</td>
+            <td>${movie.name}</td>
+            <td><img src=${movie.thumbnail_poster} alt="poster"></td>
             <td>${movie.overview}</td>
             <td>${movie.popularity}</td>
             <td>${movie.release_date}</td>
+            <td>${movie.first_air_date}</td>
             <td>${movie.vote_average}</td>
             <td>${movie.vote_count}</td>
         </tr>

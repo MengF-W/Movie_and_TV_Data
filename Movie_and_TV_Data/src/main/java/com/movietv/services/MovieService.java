@@ -6,7 +6,6 @@ import com.google.gson.JsonParser;
 import com.movietv.model.Movie;
 import com.movietv.utilities.JsonProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -38,10 +37,17 @@ public class MovieService {
         JsonElement resultsJsonElement = responseResultJsonObject.get("results");
         List<JsonElement> resultList = resultsJsonElement.getAsJsonArray().asList();
         List<Movie> movieList = new ArrayList<Movie>();
-        resultList.forEach(result -> movieList.add(JsonProcessor.getInstance().deserializeJson(result.toString(),Movie.class)));
+        resultList.forEach(result -> appendMovieList(result,movieList));
 
         return movieList;
+    }
 
+    public void appendMovieList(JsonElement result, List<Movie> movieList){
+        final String IMAGE_URL = "https://image.tmdb.org/t/p/w154";
+
+        Movie movie = JsonProcessor.getInstance().deserializeJson(result.toString(),Movie.class);
+        movie.setThumbnail_poster(IMAGE_URL+movie.getPoster_path());
+        movieList.add(movie);
 
     }
 }

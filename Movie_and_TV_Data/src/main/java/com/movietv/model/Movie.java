@@ -17,6 +17,9 @@ public class Movie {
     private String overview;
     private String poster_path;
     private String media_type;
+    private String name;
+    private String original_name;
+    private String thumbnail_poster;
 
     @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "Movie", joinColumns = @JoinColumn(name = "movie_id"))
@@ -24,6 +27,8 @@ public class Movie {
     private List<String> genre_ids;
     private float popularity;
     private String release_date;
+
+    private String first_air_date;
     private boolean video;
     private float vote_average;
     private int vote_count;
@@ -157,6 +162,38 @@ public class Movie {
 
     public void setVote_count(int vote_count) {
         this.vote_count = vote_count;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOriginal_name() {
+        return original_name;
+    }
+
+    public void setOriginal_name(String original_name) {
+        this.original_name = original_name;
+    }
+
+    public String getThumbnail_poster() {
+        return thumbnail_poster;
+    }
+
+    public void setThumbnail_poster(String thumbnail_poster) {
+        this.thumbnail_poster = thumbnail_poster;
+    }
+
+    public String getFirst_air_date() {
+        return first_air_date;
+    }
+
+    public void setFirst_air_date(String first_air_date) {
+        this.first_air_date = first_air_date;
     }
 }
 
