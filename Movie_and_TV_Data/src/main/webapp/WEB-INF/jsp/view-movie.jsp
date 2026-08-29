@@ -15,6 +15,7 @@
         <th>Title</th>
         <th>Name</th>
         <th>Movie Poster</th>
+        <th>Movie Trailer</th>
         <th>Overview</th>
         <th>Popularity</th>
         <th>Release Date</th>
@@ -31,6 +32,7 @@
             <td>${movie.title}</td>
             <td>${movie.name}</td>
             <td><img src=${movie.thumbnail_poster} alt="poster"></td>
+            <td><iframe width="154" height="231" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe></td>
             <td>${movie.overview}</td>
             <td>${movie.popularity}</td>
             <td>${movie.release_date}</td>
