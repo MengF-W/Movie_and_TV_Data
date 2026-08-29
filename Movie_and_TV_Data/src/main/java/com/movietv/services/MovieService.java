@@ -22,12 +22,14 @@ public class MovieService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value("${api.url}")
-    private String API_URL;
+    @Value("${api.key}")
+    private String API_KEY;
     public List<Movie> getMovieList(){
 
+        final String TRENDING_MOVIE_URL = "https://api.themoviedb.org/3/trending/all/day?api_key="+API_KEY+"&language=en-US";
+
         String responseResult =
-                restTemplate.getForObject(API_URL, String.class);
+                restTemplate.getForObject(TRENDING_MOVIE_URL, String.class);
 
         JsonElement responseResultJsonElement = JsonParser.parseString(responseResult);
 

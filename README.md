@@ -15,9 +15,10 @@ This web appilcation provides a Java-wrapper around the JSON API provided by TMD
 # Usage
 To register for a TMDb API key, click the [TMDb API link](https://www.themoviedb.org/settings/api) from within your account settings page. There are two types of API keys currently provided by TMDb, please ensure you are using the API Key.
 
-With this you can use it in com.movietv.services.MovieService
+With this you can use it in application.properties
 
-<img width="436" height="40" alt="image" src="https://github.com/user-attachments/assets/27df8823-48a5-45d0-8248-4ec8b3454e24" />
+<img width="872" height="29" alt="image" src="https://github.com/user-attachments/assets/7a30bf90-f8eb-4c88-b8ba-b9a7a97d1d00" />
+
 
 # Packaging Command
 `gradle clean build` - To clean and create JAR
