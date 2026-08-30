@@ -31,6 +31,7 @@ With this you can use it in application.properties
 # Running the Web Application
 Enter the URL 'http://localhost:8080/view-movie' in a web browser. The result is then displayed in the web browser
 
-<img width="1891" height="1028" alt="image" src="https://github.com/user-attachments/assets/bf33a90c-7698-4b04-b589-e940325190b0" />
+<img width="1894" height="1027" alt="image" src="https://github.com/user-attachments/assets/966f80c0-c721-4061-9eb5-afc5507ac221" />
+
 
 
