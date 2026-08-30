@@ -32,7 +32,16 @@
             <td>${movie.title}</td>
             <td>${movie.name}</td>
             <td><img src=${movie.thumbnail_poster} alt="poster"></td>
-            <td><iframe width="254" height="331" src=${movie.movie_trailer}></iframe></td>
+            <td>
+            <c:choose>
+                <c:when test="${not empty movie.movie_trailer}">
+                    <iframe width="254" height="331" src=${movie.movie_trailer}></iframe>
+                </c:when>
+                <c:otherwise>
+                    Movie trailer is not available
+                </c:otherwise>
+            </c:choose>
+            </td>
             <td>${movie.overview}</td>
             <td>${movie.popularity}</td>
             <td>${movie.release_date}</td>
