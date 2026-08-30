@@ -17,8 +17,7 @@ To register for a TMDb API key, click the [TMDb API link](https://www.themoviedb
 
 With this you can use it in application.properties
 
-<img width="872" height="29" alt="image" src="https://github.com/user-attachments/assets/7a30bf90-f8eb-4c88-b8ba-b9a7a97d1d00" />
-
+<img width="178" height="25" alt="image" src="https://github.com/user-attachments/assets/dfefe75d-4fd8-4113-a266-b62b9e5dc117" />
 
 # Packaging Command
 `gradle clean build` - To clean and create JAR
