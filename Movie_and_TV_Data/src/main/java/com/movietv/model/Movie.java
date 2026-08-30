@@ -5,12 +5,11 @@ import java.util.List;
 
 @Entity
 public class Movie {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private boolean adult;
     private String backdrop_path;
-    private int id_tmdb;
     private String title;
     private String original_language;
     private String original_title;
@@ -20,7 +19,7 @@ public class Movie {
     private String name;
     private String original_name;
     private String thumbnail_poster;
-
+    private String movie_trailer;
     @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "Movie", joinColumns = @JoinColumn(name = "movie_id"))
     @Column(name = "genre_ids", nullable = false)
@@ -58,14 +57,6 @@ public class Movie {
 
     public void setBackdrop_path(String backdrop_path) {
         this.backdrop_path = backdrop_path;
-    }
-
-    public int getId_tmdb() {
-        return id_tmdb;
-    }
-
-    public void setId_tmdb(int id_tmdb) {
-        this.id_tmdb = id_tmdb;
     }
 
     public String getTitle() {
@@ -186,6 +177,14 @@ public class Movie {
 
     public void setThumbnail_poster(String thumbnail_poster) {
         this.thumbnail_poster = thumbnail_poster;
+    }
+
+    public String getMovie_trailer() {
+        return movie_trailer;
+    }
+
+    public void setMovie_trailer(String movie_trailer) {
+        this.movie_trailer = movie_trailer;
     }
 
     public String getFirst_air_date() {
