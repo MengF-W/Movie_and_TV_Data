@@ -1,8 +1,8 @@
 
 services:
   application:
-    container_name: movie_and_TV_Data
-    image: movie_and_TV_Data
+    container_name: movie_and_tv_data
+    image: movie_and_tv_data
     restart: always
     ports:
       - "8080:8080"
