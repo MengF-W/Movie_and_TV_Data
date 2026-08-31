@@ -23,7 +23,7 @@ With this you can use it in application.properties
 `gradle clean build` - To clean and create JAR
 
 # Docker Image Command
-`docker build -t movie_and_TV_Data`    -To build the docker image
+`docker build -t movie_and_tv_data .`    -To build the docker image
 
 # Docker Container Command
 `docker-compose up -d`      -To start the docker container from the docker image with the docker compose file configuration  
