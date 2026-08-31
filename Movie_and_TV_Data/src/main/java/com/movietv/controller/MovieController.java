@@ -1,6 +1,5 @@
 package com.movietv.controller;
 
-import com.movietv.model.Movie;
 import com.movietv.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +12,8 @@ public class MovieController {
     @Autowired
     MovieService movieService;
 
-    @RequestMapping("/view-movie")
-    public ModelAndView viewBooks(ModelAndView model) {
+    @RequestMapping({"/","/view-movie"})
+    public ModelAndView viewMovie(ModelAndView model) {
 
         model.setViewName("view-movie");
         model.addObject("movies", movieService.getMovieList());
