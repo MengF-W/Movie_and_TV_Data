@@ -33,5 +33,13 @@ Enter the URL 'http://localhost:8080/view-movie' in a web browser. The result is
 
 <img width="1894" height="1027" alt="image" src="https://github.com/user-attachments/assets/966f80c0-c721-4061-9eb5-afc5507ac221" />
 
+# Publish
+It has been published and can be accessed at https://the-movie-database-tmdb-trending-movies.onrender.com/
+
+<img width="1894" height="1028" alt="image" src="https://github.com/user-attachments/assets/bf3e48cc-e2c9-4661-9056-129e6ff09954" />
+
+The host provider might cause delay of loading
+
+<img width="894" height="73" alt="image" src="https://github.com/user-attachments/assets/a2d1a923-f461-4218-a124-21a04649c85d" />
 
 
