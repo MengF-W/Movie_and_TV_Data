@@ -49,7 +49,7 @@ public class MovieService {
 
     }
 
-    private Movie setMovieTrailer(Movie movie){
+    private void setMovieTrailer(Movie movie){
 
         final String VIDEO_URL ="https://api.themoviedb.org/3/movie/"+ movie.getId() +"/videos?api_key="+API_KEY;
         final String YOUTUBE_URL ="https://www.youtube.com/embed/";
@@ -69,8 +69,5 @@ public class MovieService {
         catch (HttpClientErrorException e){
             movie.setMovie_trailer("");
         }
-
-        return movie;
-
     }
 }
