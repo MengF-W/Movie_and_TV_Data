@@ -7,21 +7,21 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<h2>The Movie Database(TMDB) Trending Movies</h2>
-<table>
+<div class="title"><h2 >The Movie Database(TMDB) Trending Movies</h2></div>
+<table class="styled-table">
     <thead>
     <tr>
-        <th>Language</th>
-        <th>Title</th>
-        <th>Name</th>
-        <th>Movie Poster</th>
-        <th>Movie Trailer</th>
-        <th>Overview</th>
-        <th>Popularity</th>
-        <th>Release Date</th>
-        <th>First Air Date</th>
-        <th>Vote Average</th>
-        <th>Vote Count</th>
+        <th style="text-align:center">Language</th>
+        <th style="text-align:center">Title</th>
+        <th style="text-align:center">Name</th>
+        <th style="text-align:center">Movie Poster</th>
+        <th style="text-align:center">Movie Trailer</th>
+        <th style="text-align:center">Overview</th>
+        <th style="text-align:center">Popularity</th>
+        <th style="text-align:center">Release Date</th>
+        <th style="text-align:center">First Air Date</th>
+        <th style="text-align:center">Vote Average</th>
+        <th style="text-align:center">Vote Count</th>
 
     </tr>
     </thead>
