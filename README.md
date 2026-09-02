@@ -31,12 +31,16 @@ With this you can use it in application.properties
 # Running the Web Application
 Enter the URL 'http://localhost:8080/view-movie' in a web browser. The result is then displayed in the web browser
 
-<img width="1894" height="1027" alt="image" src="https://github.com/user-attachments/assets/966f80c0-c721-4061-9eb5-afc5507ac221" />
+<img width="1896" height="1027" alt="image" src="https://github.com/user-attachments/assets/106051c9-715c-4a16-b770-db73f4f68570" />
+
 
 # Publish
 It has been published and can be accessed at https://the-movie-database-tmdb-trending-movies.onrender.com/
 
-<img width="1894" height="1028" alt="image" src="https://github.com/user-attachments/assets/bf3e48cc-e2c9-4661-9056-129e6ff09954" />
+<img width="1914" height="1027" alt="image" src="https://github.com/user-attachments/assets/cec75a1e-2a4a-46a7-9835-88fd5be27d62" />
+
+
+
 
 The host provider might cause delay of loading
 
