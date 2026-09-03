@@ -18,20 +18,7 @@ defaults:
   working-directory: ./Movie_and_TV_Data
 
 jobs:
-
-  create-envfile:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v2.0
-        with:
-          directory: .
-          file_name: .env
-          fail_on_empty: false
-          sort_keys: false
-
+  
   build:
 
     runs-on: ubuntu-latest
@@ -40,6 +27,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v2.0
+      with:
+        envkey_DB_HOST: ${{ secrets.DB_HOST }}
+        envkey_DB_PORT: ${{ secrets.DB_PORT }}
+        envkey_DB_NAME: ${{ secrets.DB_NAME }}
+        envkey_DB_USER: ${{ secrets.DB_USER }}
+        envkey_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        envkey_API_KEY: ${{ secrets.API_KEY }}
+        directory: .
+        file_name: .env
+        fail_on_empty: false
+        sort_keys: false
+
+    - name: Check file list
+      run: ls
+
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
