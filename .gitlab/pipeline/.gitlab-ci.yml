@@ -17,6 +17,16 @@ image: gradle:9.0.0-jdk
 before_script:
   - GRADLE_USER_HOME="$(pwd)/.gradle"
   - export GRADLE_USER_HOME
+  - echo "$DB_HOST" | base64 -d
+  - echo "$DB_PORT" | base64 -d
+  - echo "$DB_NAME" | base64 -d
+  - echo "$DB_USER" | base64 -d
+  - echo "$DB_PASSWORD" | base64 -d
+  - export DECODED_DB_HOST="$DB_HOST"
+  - export DECODED_DB_PORT="$DB_PORT"
+  - export DECODED_DB_NAME="$DB_NAME"
+  - export DECODED_DB_USER="$DB_USER"
+  - export DECODED_DB_PASSWORD="$DB_PASSWORD"
 
 
 test:
@@ -39,6 +49,14 @@ build:
   stage: build
   script: 
     - cd ./Movie_and_TV_Data
+    - touch .env
+    - echo "DB_HOST=$DECODED_DB_HOST" >> .env
+    - echo "DB_PORT=$DECODED_DB_PORT" >> .env
+    - echo "DB_NAME=$DECODED_DB_NAME" >> .env
+    - echo "DB_USER=$DECODED_DB_USER" >> .env
+    - echo "DB_PASSWORD=$DECODED_DB_PASSWORD" >> .env
+    - cat .env
+    - ls -a
     - gradle --build-cache assemble
   cache:
     key: "$CI_COMMIT_REF_NAME"
