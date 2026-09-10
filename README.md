@@ -39,6 +39,10 @@ It has been published and can be accessed at https://the-movie-database-tmdb-tre
 
 <img width="1914" height="1027" alt="image" src="https://github.com/user-attachments/assets/cec75a1e-2a4a-46a7-9835-88fd5be27d62" />
 
+The host provider might cause delay of loading
+
+<img width="894" height="73" alt="image" src="https://github.com/user-attachments/assets/a2d1a923-f461-4218-a124-21a04649c85d" />
+
 # API Service
 The Trending Movie API service is available. Enter https://the-movie-database-tmdb-trending-movies.onrender.com/api/v1/movie/view-movie to receive the content in JSON form of response.
 
@@ -48,8 +52,6 @@ The Trending Movie API service is available. Enter https://the-movie-database-tm
 
 
 
-The host provider might cause delay of loading
 
-<img width="894" height="73" alt="image" src="https://github.com/user-attachments/assets/a2d1a923-f461-4218-a124-21a04649c85d" />
 
 
