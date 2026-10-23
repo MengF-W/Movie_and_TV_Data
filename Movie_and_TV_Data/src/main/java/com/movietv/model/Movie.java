@@ -24,12 +24,12 @@ public class Movie {
     @CollectionTable(name = "Movie", joinColumns = @JoinColumn(name = "movie_id"))
     @Column(name = "genre_ids", nullable = false)
     private List<String> genre_ids;
-    private float popularity;
+    private long popularity;
     private String release_date;
 
     private String first_air_date;
     private boolean video;
-    private float vote_average;
+    private long vote_average;
     private int vote_count;
 
     public Movie() {
@@ -115,11 +115,11 @@ public class Movie {
         this.genre_ids = genre_ids;
     }
 
-    public float getPopularity() {
+    public long getPopularity() {
         return popularity;
     }
 
-    public void setPopularity(float popularity) {
+    public void setPopularity(long popularity) {
         this.popularity = popularity;
     }
 
@@ -139,11 +139,11 @@ public class Movie {
         this.video = video;
     }
 
-    public float getVote_average() {
+    public long getVote_average() {
         return vote_average;
     }
 
-    public void setVote_average(float vote_average) {
+    public void setVote_average(long vote_average) {
         this.vote_average = vote_average;
     }
 
