@@ -17,6 +17,8 @@ import java.util.concurrent.atomic.AtomicReference;
 @Service
 public class MovieService {
 
+    Logger logger = LoggerFactory.getLogger(MovieService.class);
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -44,7 +46,7 @@ public class MovieService {
 
         }catch(HttpClientErrorException e)
         {
-            e.printStackTrace();
+            logger.debug("Exception caught when getting movie list: ", e.getMessage());
         }
 
         return movieList;
@@ -69,6 +71,7 @@ public class MovieService {
                     .forEach(result -> MOVIE_TRAILER_URL.set(YOUTUBE_URL + result.getAsJsonObject().get("key").getAsString()));
         }
         catch (HttpClientErrorException e){
+            logger.debug("Exception caught when getting movie trailer: ", e.getMessage());
             MOVIE_TRAILER_URL.set("");
         }
 
